@@ -33,6 +33,9 @@ app.use('/api/message', routes.messages);
 console.log('after app use /api/message');
 
 // for all messages. goes to the routes messages.js '/'
+<<<<<<< HEAD
+>>>>>>> comment added for the messages routes
+=======
 >>>>>>> comment added for the messages routes
 app.use('/api/messages', routes.messages);
 app.use('/api/profiles', routes.profiles);
