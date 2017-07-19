@@ -30,9 +30,11 @@ console.log('after app use /auth ');
 app.use('/api', routes.api);
 console.log('after app use /api ');
 
+// for an individual message. goes to the route messages.js '/:id'
 app.use('/api/message', routes.messages);
 console.log('after app use /api/message');
 
+// for all messages. goes to the routes messages.js '/'
 app.use('/api/messages', routes.messages);
 console.log('after app use /api/messages');
 
