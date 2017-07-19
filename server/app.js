@@ -28,14 +28,19 @@ app.use('/api/profiles', routes.profiles);
 =======
 console.log('after app use /api ');
 
+// for an individual message. goes to the route messages.js '/:id'
 app.use('/api/message', routes.messages);
 console.log('after app use /api/message');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // for all messages. goes to the routes messages.js '/'
 <<<<<<< HEAD
 >>>>>>> comment added for the messages routes
 =======
+>>>>>>> comment added for the messages routes
+=======
+// for all messages. goes to the routes messages.js '/'
 >>>>>>> comment added for the messages routes
 app.use('/api/messages', routes.messages);
 =======
