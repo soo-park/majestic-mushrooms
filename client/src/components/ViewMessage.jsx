@@ -10,13 +10,15 @@ class ViewMessage extends React.Component {
     super(props);
     this.state ={
       threads: [],
-      messageId: 'abcde12345',
-      threadId: 'placeholder',
+      messageId: this.props.location.state.message_id,
+      threadId: his.props.location.state.message_id,
       currentMessage: {}
     }
+    console.log('props in the view message', this.props.location.state);
   }
 
   componentWillMount() {
+    // getting one email data from DB
     var messageId = this.state.messageId;
     axios.get('/api/message/'+ this.state.messageId)
     .then (response => {
@@ -27,17 +29,35 @@ class ViewMessage extends React.Component {
     .then (
       axios.get(`/api/thread/${this.state.threadId}`)
       .then (response => {
-        // var thread;
-        // if (Array.isArray(response.data)) {
-        //   thread = response.data;
-        // } else {
-        //   thread = [response.data];
-        // }
         this.setState({
           threads: response.data
         })
       })
     )
+
+    // getting thread data from Nylas
+    const app = this;
+    const authString = 'Bearer ' + window.token;
+    axios.get('https://api.nylas.com/messages', {
+      headers: { Authorization: authString }
+    }).then(response => {
+      const retrievedMessages = response.data.slice(0, 21).map(message => {
+        return {
+          from: message.from,
+          subject: message.subject,
+          snippet: message.snippet,
+          unread: message.unread,
+          message_id: message.id,
+          body: message.body,
+          message_id: message.message_id,
+          thread_id: message.thread_id
+        }
+      });
+      app.setState({
+        threads: retrievedMessages
+      })
+    });
+
   }
 
   handleMessageClick() {
@@ -46,7 +66,6 @@ class ViewMessage extends React.Component {
 
   render() {
     var display = null;
-    console.log('thread in view', this.state.threads);
 
     // TODO: have condition if there is no thread
     // TODO: change the names according to the Nylas data structure & the circle
@@ -70,7 +89,7 @@ class ViewMessage extends React.Component {
             </Table.Header>
             <Table.Body>
             <Table.Row>
-            <Table.Cell colSpan='4'>
+            <Table.Cell colSpan='3'>
             {this.state.currentMessage.body}
             </Table.Cell>
             </Table.Row>
@@ -83,12 +102,3 @@ class ViewMessage extends React.Component {
       };
 
       export default ViewMessage;
-
-      // <Table.Row>
-      // <Table.Cell width="1">
-      //   <Label circular >a</Label>
-      //   </Table.Cell>
-      //   <Table.Cell width="3">{'     ' + this.state.currentMessage.from}</Table.Cell>
-      // <Table.Cell style={{fontWeight: 'bold'}}>{this.state.currentMessage.subject}</Table.Cell>
-      // <Table.Cell>{this.state.currentMessage.snippet}</Table.Cell>
-      // </Table.Row>

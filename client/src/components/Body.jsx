@@ -27,7 +27,8 @@ class Body extends React.Component {
           subject: message.subject,
           snippet: message.snippet,
           unread: message.unread,
-          message_id: message.id
+          message_id: message.id,
+          thread_id: message.thread_id
         }
       });
       app.setState({
