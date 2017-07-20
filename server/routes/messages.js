@@ -17,9 +17,4 @@ router.route('/:id')
 //   // .delete(MessageController.deleteOne)
 ;
 
-router.route('/:id/:thread')
-.get((req, res) => {
-  MessageController.getThread(req, res);
-})
-
 module.exports = router;
