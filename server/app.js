@@ -23,6 +23,7 @@ app.use('/', routes.auth);
 app.use('/authenticated', routes.auth);
 app.use('/api', routes.api);
 <<<<<<< HEAD
+<<<<<<< HEAD
 app.use('/api/message', routes.messages);
 app.use('/api/profiles', routes.profiles);
 =======
@@ -42,6 +43,16 @@ console.log('after app use /api/message');
 =======
 // for all messages. goes to the routes messages.js '/'
 >>>>>>> comment added for the messages routes
+=======
+
+console.log('after app use /api ');
+
+// for an individual message. goes to the route messages.js '/:id'
+app.use('/api/message', routes.messages);
+console.log('after app use /api/message');
+
+// for all messages. goes to the routes messages.js '/'
+>>>>>>> app minor change
 app.use('/api/messages', routes.messages);
 =======
 =======
