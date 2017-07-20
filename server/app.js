@@ -28,10 +28,10 @@ app.use('/api/profiles', routes.profiles);
 =======
 console.log('after app use /api ');
 
-// for an individual message. goes to the route messages.js '/:id'
 app.use('/api/message', routes.messages);
 console.log('after app use /api/message');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // for all messages. goes to the routes messages.js '/'
@@ -44,6 +44,8 @@ console.log('after app use /api/message');
 >>>>>>> comment added for the messages routes
 app.use('/api/messages', routes.messages);
 =======
+=======
+>>>>>>> merge conflict resolved
 app.use('/api/thread', routes.thread);
 console.log('after app use /api/thread');
 

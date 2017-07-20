@@ -23,6 +23,7 @@ router.route('/:id')
   })
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 router.route('/:id/:type/:typeid')
   .put( middleware.auth.verify, (req, res) => {
     console.log(`Inside Routes message.js PUT for /${req.params.id}`);
@@ -34,3 +35,6 @@ module.exports = router;
 =======
 module.exports = router;
 >>>>>>> mail read view pulls thread data from DB
+=======
+module.exports = router;
+>>>>>>> merge conflict resolved

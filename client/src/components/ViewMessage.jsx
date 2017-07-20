@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Redirect } from 'react-router-dom'; 
@@ -59,6 +60,8 @@ class ViewMessage extends React.Component {
       
 export default ViewMessage;
 =======
+=======
+>>>>>>> merge conflict resolved
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Redirect } from 'react-router-dom';
@@ -153,4 +156,7 @@ class ViewMessage extends React.Component {
       // <Table.Cell style={{fontWeight: 'bold'}}>{this.state.currentMessage.subject}</Table.Cell>
       // <Table.Cell>{this.state.currentMessage.snippet}</Table.Cell>
       // </Table.Row>
+<<<<<<< HEAD
 >>>>>>> mail read view pulls thread data from DB
+=======
+>>>>>>> merge conflict resolved
