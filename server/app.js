@@ -34,9 +34,8 @@ console.log('after app use /api ');
 app.use('/api/message', routes.messages);
 console.log('after app use /api/message');
 
-// for all messages. goes to the routes messages.js '/'
-app.use('/api/messages', routes.messages);
-console.log('after app use /api/messages');
+app.use('/api/thread', routes.thread);
+console.log('after app use /api/thread');
 
 app.use('/api/profiles', routes.profiles);
 console.log('after app use /api/profiles');

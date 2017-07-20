@@ -26,7 +26,7 @@ class MailViewList extends React.Component {
   }
   
   componentWillMount() {
-    axios.get('/api/messages')
+    axios.get('/api/message')
     .then (response => {
       this.setState({
         messages: response.data
