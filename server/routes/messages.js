@@ -22,6 +22,7 @@ router.route('/:id')
     MessageController.getOne(req, res);
   })
 
+<<<<<<< HEAD
 router.route('/:id/:type/:typeid')
   .put( middleware.auth.verify, (req, res) => {
     console.log(`Inside Routes message.js PUT for /${req.params.id}`);
@@ -30,3 +31,6 @@ router.route('/:id/:type/:typeid')
 
 
 module.exports = router;
+=======
+module.exports = router;
+>>>>>>> mail read view pulls thread data from DB

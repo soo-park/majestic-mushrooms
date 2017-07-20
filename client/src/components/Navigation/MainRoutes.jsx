@@ -12,8 +12,13 @@ const routes = [
     component:     Body
   },
   { path:          '/authenticated',
+<<<<<<< HEAD
     exact:         true,
     component:     Body
+=======
+  exact:         true,
+  component:     Body
+>>>>>>> mail read view pulls thread data from DB
   },
   { path:          '/compose',
     exact:         true,

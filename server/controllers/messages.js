@@ -3,6 +3,7 @@ const axios = require('axios');
 
 
 module.exports.getAll = (req, res) => {
+<<<<<<< HEAD
   // models.Message.fetch()
   // .then(messages => {
   //   res.status(200).send('in getAll');// render to the page
@@ -43,6 +44,34 @@ module.exports.create = (req, res) => {
     res.status(500).send(err);
   });
 };
+=======
+  models.Message.fetchAll()
+    .then(Messages => {
+      res.status(200).send(Messages);
+      // res.render('index.ejs', {messages: messages}, function(err, html) {
+      // })
+    })
+    .catch(err => {
+      // This code indicates an outside service (the database) did not respond in time
+      res.status(503).send(err);
+    });
+};
+
+
+// module.exports.create = (req, res) => {
+//   models.Message.forge({ username: req.body.username, password: req.body.password })
+//     .save()
+//     .then(result => {
+//       res.status(201).send(result.omit('password'));
+//     })
+//     .catch(err => {
+//       if (err.constraint === 'users_username_unique') {
+//         return res.status(403);
+//       }
+//       res.status(500).send(err);
+//     });
+// };
+>>>>>>> mail read view pulls thread data from DB
 
 //@TODO Dont' hard code the message id
 module.exports.getOne = (req, res) => {
