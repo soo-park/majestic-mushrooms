@@ -4,6 +4,7 @@ const axios = require('axios');
 
 module.exports.getAll = (req, res) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // models.Message.fetch()
   // .then(messages => {
   //   res.status(200).send('in getAll');// render to the page
@@ -23,11 +24,22 @@ module.exports.getAll = (req, res) => {
   }).then(response => {
     res.send(response.data);
   });
+=======
+  models.Message.fetchAll()
+    .then(Messages => {
+      res.status(200).send(Messages);
+      // res.render('index.ejs', {messages: messages}, function(err, html) {
+      // })
+    })
+    .catch(err => {
+      // This code indicates an outside service (the database) did not respond in time
+      res.status(503).send(err);
+    });
+>>>>>>> 1a3d5d53f04c3dac5e3fd66892c52d7df66ebdf3
 };
 
-//@TODO Dont' hard code the message id
-module.exports.create = (req, res) => {
 
+<<<<<<< HEAD
   console.log('Inside Messages Controller create() ');
   let newMessage= new models.Message(
    req.body
@@ -58,6 +70,8 @@ module.exports.create = (req, res) => {
 };
 
 
+=======
+>>>>>>> 1a3d5d53f04c3dac5e3fd66892c52d7df66ebdf3
 // module.exports.create = (req, res) => {
 //   models.Message.forge({ username: req.body.username, password: req.body.password })
 //     .save()
@@ -71,7 +85,10 @@ module.exports.create = (req, res) => {
 //       res.status(500).send(err);
 //     });
 // };
+<<<<<<< HEAD
 >>>>>>> mail read view pulls thread data from DB
+=======
+>>>>>>> 1a3d5d53f04c3dac5e3fd66892c52d7df66ebdf3
 
 //@TODO Dont' hard code the message id
 module.exports.getOne = (req, res) => {

@@ -15,7 +15,11 @@ router.route('/')
     console.log('Inside Routes messages.js GET ');
     MessageController.getAll(req, res);
   });
+//   .get(MessageController.getOne)  
+//   .put(MessageController.update)
+//   // .delete(MessageController.deleteOne)
 
+<<<<<<< HEAD
 router.route('/:id')
   .get( middleware.auth.verify, (req, res) => {
     console.log(`Inside Routes messages.js GET for /${req.params.id}`);
@@ -32,9 +36,16 @@ router.route('/:id/:type/:typeid')
 
 
 module.exports = router;
+<<<<<<< HEAD
 =======
 module.exports = router;
 >>>>>>> mail read view pulls thread data from DB
 =======
 module.exports = router;
 >>>>>>> merge conflict resolved
+=======
+>>>>>>> mail read view pulls thread data from DB
+>>>>>>> new routes implemented
+=======
+module.exports = router;
+>>>>>>> 1a3d5d53f04c3dac5e3fd66892c52d7df66ebdf3

@@ -25,9 +25,17 @@ class MailViewList extends React.Component {
   }
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   componentWillReceiveProps({ messages }) {
     this.setState({messages: messages});
 =======
+=======
+
+>>>>>>> new routes implemented
+=======
+
+>>>>>>> 1a3d5d53f04c3dac5e3fd66892c52d7df66ebdf3
   componentWillMount() {
     axios.get('/api/message')
     .then (response => {
@@ -36,7 +44,13 @@ class MailViewList extends React.Component {
       })
       console.log(this.state.messages);
     })
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> mail read view pulls thread data from DB
+=======
+>>>>>>> new routes implemented
+=======
+>>>>>>> 1a3d5d53f04c3dac5e3fd66892c52d7df66ebdf3
   }
 
   handleMessageClick(e, messageId) {

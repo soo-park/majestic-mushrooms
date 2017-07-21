@@ -24,6 +24,7 @@ app.use('/authenticated', routes.auth);
 app.use('/api', routes.api);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 app.use('/api/message', routes.messages);
 app.use('/api/profiles', routes.profiles);
 =======
@@ -47,10 +48,10 @@ console.log('after app use /api/message');
 
 console.log('after app use /api ');
 
-// for an individual message. goes to the route messages.js '/:id'
 app.use('/api/message', routes.messages);
 console.log('after app use /api/message');
 
+<<<<<<< HEAD
 // for all messages. goes to the routes messages.js '/'
 >>>>>>> app minor change
 app.use('/api/messages', routes.messages);
@@ -61,6 +62,25 @@ app.use('/api/thread', routes.thread);
 console.log('after app use /api/thread');
 
 >>>>>>> mail read view pulls thread data from DB
+=======
+
+=======
+
+console.log('after app use /api ');
+
+// for an individual message. goes to the route messages.js '/:id'
+app.use('/api/message', routes.messages);
+console.log('after app use /api/message');
+
+>>>>>>> 1a3d5d53f04c3dac5e3fd66892c52d7df66ebdf3
+app.use('/api/thread', routes.thread);
+console.log('after app use /api/thread');
+
+
+<<<<<<< HEAD
+>>>>>>> new routes implemented
+=======
+>>>>>>> 1a3d5d53f04c3dac5e3fd66892c52d7df66ebdf3
 app.use('/api/profiles', routes.profiles);
 app.use('/api/folders', routes.folders);
 app.use('/api/search', routes.search);

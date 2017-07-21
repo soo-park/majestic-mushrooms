@@ -13,12 +13,22 @@ const routes = [
   },
   { path:          '/authenticated',
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     exact:         true,
     component:     Body
 =======
   exact:         true,
   component:     Body
 >>>>>>> mail read view pulls thread data from DB
+=======
+  exact:         true,
+  component:     Body
+>>>>>>> new routes implemented
+=======
+  exact:         true,
+  component:     Body
+>>>>>>> 1a3d5d53f04c3dac5e3fd66892c52d7df66ebdf3
   },
   { path:          '/compose',
     exact:         true,

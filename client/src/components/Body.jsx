@@ -27,6 +27,19 @@ class Body extends React.Component {
 
     axios.get('/api/messages/').then(response => {
       const retrievedMessages = parseMessages(response.data, today);
+    const authString = 'Bearer ' + window.token;
+    axios.get('https://api.nylas.com/messages', {
+      headers: { Authorization: authString }
+    }).then(response => {
+      const retrievedMessages = response.data.slice(0, 21).map(message => {
+        return {
+          from: message.from,
+          subject: message.subject,
+          snippet: message.snippet,
+          unread: message.unread,
+          message_id: message.id
+        };
+      });
       app.setState({
         messages: retrievedMessages
       });
